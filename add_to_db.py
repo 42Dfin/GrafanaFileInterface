@@ -1,6 +1,6 @@
 import pandas as pd
-import psycopg2
-from psycopg2 import sql
+#import psycopg2
+from psycopg2 import sql, connect
 
 table_name = 'log_data'
 def upload_data_to_postgres(file_path, db_params):
@@ -8,7 +8,7 @@ def upload_data_to_postgres(file_path, db_params):
     df = pd.read_csv(file_path)
 
     # Connect to PostgreSQL
-    conn = psycopg2.connect(**db_params)
+    conn = connect(**db_params)
     cursor = conn.cursor()
 
     # Define the table name and create table SQL statement
