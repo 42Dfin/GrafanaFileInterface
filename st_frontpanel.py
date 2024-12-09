@@ -95,10 +95,10 @@ if uploaded_files:
         selected_files = [p_files[i - 1] for i in selected_file_indexes]
         st.write(f"Selected files: {selected_files}")
 
-# Extract logs button
-if st.button("Extract Logs"):
-    convert1()  # Call the convert1() function to extract logs (if needed again)
-    st.success("Logs extracted successfully!")
+# # Extract logs button
+# if st.button("Extract Logs"):
+#     convert1()  # Call the convert1() function to extract logs (if needed again)
+#     st.success("Logs extracted successfully!")
 
 # Apply to DB button
 if st.button("Apply to DB"):
